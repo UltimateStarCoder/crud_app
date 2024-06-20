@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+function SignInPage() {
   return (
     <div className="App">
       <div className="container">
@@ -29,5 +29,31 @@ function App() {
   );
 }
 
+function Dashboard(){
 
-export default App;
+}
+
+function CreateNewItemPage(){
+
+}
+
+function EditItemPage(){
+
+}
+
+function MyInventoryPage(){
+
+}
+
+function SingleItemView_AuthenticatedInventoryManager(){
+
+}
+
+function PublicItemPage(){
+
+}
+
+function SingleItemView_UnauthenticatedVisitor(){
+
+}
+export default SignInPage;
