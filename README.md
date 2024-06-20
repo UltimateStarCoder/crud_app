@@ -1,3 +1,38 @@
+# MySQL Instructions
+==> Caveats
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -u root
+
+To start mysql now and restart at login:
+  brew services start mysql
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+==> Summary
+🍺  /opt/homebrew/Cellar/mysql/8.3.0_1: 324 files, 312.9MB
+==> Running `brew cleanup mysql`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> mysql
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -u root
+
+To start mysql now and restart at login:
+  brew services start mysql
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

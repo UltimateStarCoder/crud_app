@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+
 }
 
 .mainPage {
@@ -41,6 +42,8 @@
   justify-content: center;
   align-items: center;
   border: #282c34 1px solid;
+  border-radius: 20px;
+  background-color: lightblue;
 }
 .box1 {
   width: 87%;
@@ -49,4 +52,15 @@
   justify-content: center;
   align-items: center;
   border: #282c34 1px solid;
+}
+
+.pageBox {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: lightblue;
 }
