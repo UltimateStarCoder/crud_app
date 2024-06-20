@@ -30,10 +30,44 @@ function SignInPage() {
 }
 
 function Dashboard(){
+  return (
+    <div className= "App">
+      <div className = "mainPage">
+        <header className="title">
+          <p>
+            Dashboard
+          </p>
+        </header>
+        <div className="box1">
+          < p> Welcom $Username! </p>
+        </div>
+        <div className="box1">
+          <button type="submit" className="btn">My Inventory</button>
+          <button type="submit" className="btn">Create New Item</button>
+          <button type="submit" className="btn">Edit Item</button>
+          <button type="submit" className="btn">Logout</button>
+        </div>
+
+      </div>
+
+    </div>
+  );
 
 }
 
 function CreateNewItemPage(){
+  return (
+    <div className="App">
+      <div className="mainPage">
+        <header className="title">
+          <p>
+            Create New Item
+          </p>
+        </header>
+
+      </div>
+    </div>
+  );
 
 }
 
@@ -56,4 +90,4 @@ function PublicItemPage(){
 function SingleItemView_UnauthenticatedVisitor(){
 
 }
-export default SignInPage;
+export default CreateNewItemPage;
