@@ -1,15 +1,34 @@
-const express = require('express');
-const mysql = require('mysql');
-const app = express();
+const sql = require('mssql');
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-  });
+//mssql database config
+const config = {
+  user: 'sqlserver',
+  password: 'StrongPW2024(!)',
+  database: 'crudDatabase',
+  /*
+  options : {
+    encrypt: true,
+    trustedServerConnection: true
+  }
+    */
+}
 
-const db = mysql.createConnection({
-    host: 'localhost',
-});
-const port = 3001;
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+async function createUser(newLogin, newUser, newPassword, crudDatabase) {
+  try {
+    // Connect to the database
+    await sql.connect(config);
+    console.log('Connected to the database');
+
+    // Create a new user
+    await sql.query`CREATE LOGIN ${newLogin} WITH PASSWORD = '${newPassword}'`;
+    await sql.query `USE ${crudDatabase}`
+    await sql.query`CREATE USER ${newUser} FOR LOGIN ${newLogin}`;
+
+    console.log('User created successfully');
+    }
+  catch (err) {
+    console.error('Failed to create user',err);
+  }
+};
+
+createUser();
